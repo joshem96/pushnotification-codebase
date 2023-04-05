@@ -1,0 +1,31 @@
+        /* hide error message popups */
+        #jotform_oauth_frame_mask{
+            display: none !important;
+        }
+        button{
+            padding: 20px;
+            cursor: pointer;
+        }
+        button#delete-submissions-btn{
+            background: red;
+        }
+        .border-1{
+            border: 2px solid currentColor;
+        }
+        .i-block{
+            display: inline-block;
+        }
+        .mh-5{
+            margin: 0px 5px
+        }
+        .mv-5{
+            margin: 5px 0px;
+        }
+        .p-20{
+            padding: 20px;
+        }
+        .t-center{
+            text-align: center;
+        }
+
+        

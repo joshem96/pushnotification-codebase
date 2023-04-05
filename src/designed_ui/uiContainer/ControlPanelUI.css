@@ -1,0 +1,94 @@
+body *{
+    box-sizing: border-box;
+}
+
+
+/* CSS Variables */
+:root{
+    --ui-block-bg: #1E1E1E;
+    --block-spacing: 15px;
+}
+
+/* Main Body Styles */
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #121212;
+}
+
+/* UI Container styles */
+.body.container{
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--block-spacing);
+    row-gap: var(--block-spacing);
+    /* min-height: 92vh; */
+    padding: 2%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Top and bottom block container */
+section:is(.top,.bottom){
+    /* min-height: 8vh; */
+    gap: var(--block-spacing);
+    width: 100%;
+    display: flex;
+    /* border: 2px solid red; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* tool container outer*/
+.ui-block{
+    align-items: center;
+    align-self: flex-start;
+    background: var(--ui-block-bg);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-width: 350px;
+    max-width: 100%;
+    min-height: 200px;
+}
+/* tool container inner */
+.ui-block.inner{
+    padding: 2rem;
+}
+.top .grow-item:nth-of-type(1){
+    align-self: flex-end;
+}
+
+
+
+/* desktop styles */
+@media(min-width: 1150px){
+    /* UI COntainer styles */
+    .body.container{
+        height: 92vh;
+        max-height: 600px;
+        min-height: auto;
+    }
+
+}
+
+/* tablet and mobile styles */
+@media (max-width: 1149px){
+    /* tool container outer*/
+    .ui-block{  
+        /* align-self: center; */
+    }
+}
+
+/* mobile styles */
+@media(max-width:600px){
+    /* Top and bottom block container */
+    /* section:is(.top,.bottom){
+        gap: 7vh;
+    } */
+
+    .top{
+        /* margin-bottom: 5vh; */
+    }
+}

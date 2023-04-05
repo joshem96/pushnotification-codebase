@@ -1,0 +1,84 @@
+- start searching
+    - on start
+        - enabled
+    - while calls are active (able to click x and another one pops up)
+        - disabled
+    - after all calls made
+        - disabled
+	- only needed:
+		- before searching for pushes has commenced
+		- after all pushes have been shown and searching has been pressed
+
+- stop searching
+    - on start
+        - disabled
+    - while calls are active (able to click x and another one pops up)
+        - disabled
+    - after all calls made
+        - active
+	- only needed:
+        - once 'start searching' has first been pressed and all notifications shown
+            - after an API call, compare the length of the API call response to the resppnse in globalInfo
+            - if theyre the same, enable. (should be a script in there you can leach off)
+
+/* to use, not yet in script */
+.disabled-btn{
+    opacity: .5;
+}
+
+NOTE- Delete notifcation only works on domain 
+
+------
+
+- 'start search' clicked
+    - 'start search' btn disabled !DONE!
+- x clicked
+    - after 3 seconds ie: no more pushes to be shown
+        - if push.style.visisibility == hidden 
+            - "stop search btn" enabled
+                - if "stop search btn" clicked
+                    - disable stop search
+                    - enable start search
+            - "start search btn" disabled
+            - clear this timeout
+            - add string 'no new messages' to push placeholder
+            
+
+- when the exit button is clicked and 3 second code starts
+- if the pop up comes back, destroy the 3 second code
+    - setinterval of 100ms checking if visisibility of popup
+    - if its visisble, destroy 3 second code
+    - otherwise clear this interval once the 3 seconds timeout code has been ran
+
+    ---------
+
+    MARCH UPDATE
+
+    - Only show 'stop searching' btn when there are no more notifications left to show 
+        - once start searching is clicked again, and it checks that theres no new notifications
+         show stop searching. If new notificaiton shows, go to next step
+    - AS soon as a notification is recieved (while actively searching), hide stop searching 
+
+    when 'x' is clicked, check if its the last one
+        - if yes
+            - show stop searching 
+
+    as soon as a pop up is shown, remove stop searching
+
+
+    FIRST THING TO DO!
+    - turn of "stop searching" being made visible when start searching is clicked
+    - When 'x' clicked
+        - if the current pop up message is the last message or all have been deleted
+            - show stop searching
+
+    SECOND THING TO DO!
+    - Whenever pop up shows, disable "stop searching"
+    - make stop searching automatically show after start searching has been pushed
+
+    - NOTE
+        - 
+
+APRIL UP DATE (WHATS BEEN DONE RECENTLY)
+- When a notification is recieved, stop searchin button is disabled
+- when x on the popup has been clicked and the current push is the last, show stop searching

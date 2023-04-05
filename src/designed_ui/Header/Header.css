@@ -1,0 +1,22 @@
+header{
+    padding: 0px .5rem .5rem .5rem;
+}
+
+header .container{
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+}
+
+.main-header{
+    background: grey;
+    padding: .5rem;
+}
+
+.secondary-header{
+    background: purple;
+    padding: .25rem;
+}
+
+.parent-container{
+    margin: 0 auto;
+}

@@ -1,0 +1,28 @@
+/* API Status log */
+.api-status .pre-inline{
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    max-width: 300px;
+    text-align: left;
+}
+
+/* status indicator - NOT YET ACTIVE */
+span.api-status::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: red;
+    display: none;
+    top: 0;
+    /* position: relative; */
+    /* top: 0; */
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.disabled-btn{
+    opacity: .5;
+    pointer-events: none;
+}

@@ -1,0 +1,56 @@
+/* source iframe for usage log */
+.log-wrap iframe{
+    border: 1px solid transparent !important;
+    height: 294px;
+    overflow: hidden;
+}
+
+/* outer container usage log */
+.usagelog.container{
+    height: 350px;
+}
+
+/* inner container of log */
+.log-wrap{
+    position: relative;
+}
+
+@media(min-width: 1150px ){
+    /* usage log most outer container */
+    .bottom.row .ui-block:nth-of-type(1){
+        visibility: hidden;
+    }
+    /* usage log inner container */
+    .usagelog.ui.container{
+        /* position: absolute; */
+        /* margin-top: -20%; */
+        visibility: visible;
+        background: #1e1e1e;
+        border-radius: 5px;
+    }
+}
+
+.usagelog.refresh.btn{
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    right: 0;
+    margin-right: 25px;
+    margin-top: -25px;
+    background-image: url('../Assets/Refresh_Icon.png');
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    /* transition: all 1s;
+    transform: rotate(0deg); */
+}
+
+.usagelog.refresh.btn:active{
+    animation-name: rotate;
+    animation-duration: .5s;
+}
+
+@keyframes rotate{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg);}
+}

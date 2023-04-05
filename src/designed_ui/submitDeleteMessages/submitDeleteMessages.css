@@ -1,0 +1,47 @@
+:root{
+    --delete-messages: #c1121f;
+    --delete-messages-hover: #a7121f;
+}
+
+button.delete{
+    background: var(--delete-messages);
+}
+button.delete:hover{
+    background: var(--delete-messages-hover);
+}
+
+.icon{
+    height: 23px;
+    width: 23px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+/* delete icon wrap */
+.delete.btn:hover{
+    text-decoration-color: red;
+    color: red;
+}
+
+/* delete and send icons */
+.icon.send{
+    background-image: url('../Assets/send_blue_1.png');
+    filter: saturate(1);
+}
+.icon.delete{
+    background-image: url('../Assets/delete_Red.png');
+    filter: saturate(1.5);
+}
+
+/* icon/copy wrap */
+.submit-delete-messages.btn{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    transform: all .2s;
+    text-decoration: none;
+}
+.submit-delete-messages.btn:hover{
+    text-decoration: underline;
+}
