@@ -23,6 +23,7 @@ function initglobalInfo(){
             popUpContainer: '',
             popUpText: '',
             popUpTextWrap: '',
+            demoMode: true,
             exitButton: '',
             p_pushText: document.querySelector('.push-text + pre'),
             responseAnswerNumber: 4 /* the number array the answer resides in */,

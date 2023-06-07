@@ -7,6 +7,14 @@ var popupElementsObject = {
     firstCallHasBeenMade: false,
 }
 
+//checks if demo is on, if so override the notification text 
+function demoModeCheck(pushText){
+    if(globalInfo.demoMode){
+        pushText = 'Demo mode notifcation override'
+    }
+    return pushText;
+}
+
 //initalise the popupElementsObject essentially
 //NOTE: running this function returns a new iteration of popupElementsObject
 function popupElements(){
@@ -41,7 +49,7 @@ function popupElements(){
         popupElementsObject.popUpTextWrap.style =
         'display: flex; justify-content: center; align-items: center; flex-grow: 1';
         popupElementsObject.popUpText.style = 
-        'font-size: 20px; text-align: center; padding: 0px 15px; margin-top: 0px;';
+        'font-size: 20px; text-align: center; padding: 0px 6px; margin-top: 0px;';
         popupElementsObject.exitButton.style = 
         'margin-right: 10px; margin-top: 5px; font-size: 25px; font-weight: bold; cursor: pointer; text-align: right';
         
@@ -68,6 +76,10 @@ function createAndAppendPopup(pushText){
 //globalInfo
 //INSERT PUSH FUNCTION
 function insertPush(pushText){
+
+    //if demo mode is on, override users push input
+    pushText = demoModeCheck(pushText);
+
     console.log(globalInfo);
     //adjust all styles to display push notifcation (which is currently hidden via css)
     //insert pushText (form response) into the push notifcation text node

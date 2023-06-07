@@ -120,4 +120,19 @@
 
 
         }
+
+        /* design for < 350px width screens */
+        @media (max-width: 325px){
+            h1,h2{
+                font-size: 14px;
+            }
+            .outer.container:not(.popup){
+                min-width: auto;
+            }
+            iframe{
+                max-width: 100%;
+                width: 250px;
+            }
+
+        }
         

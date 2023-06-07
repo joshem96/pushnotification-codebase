@@ -12,11 +12,39 @@ header .container{
     padding: .5rem;
 }
 
+/* purple bar */
 .secondary-header{
     background: purple;
     padding: .25rem;
 }
 
 .parent-container{
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
 }
+
+header h1,nav,nav ul{
+    display: inline-block;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav a{
+    font-style: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+

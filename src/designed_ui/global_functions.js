@@ -29,17 +29,33 @@ function getFormData() {
         APILogBuffer('recieved form submission data');
         console.log(globalInfo)
         
+        //if delete submissions script has been ran
+        //which means the stored submissionsResponses length will be greater than the API response
+        //reset all necessary values, as if the script hasn't been ran yet
+        //response.length === 1 && globalInfo.submissionResponses.length > 1
+        //TODO: fix: globalInfo.submissionResponses.length > 1 && response.length < globalInfo.submissionResponses.length
+        if(response.length === 1 && globalInfo.submissionResponses.length > 1 ){
+            // assign reponse to globalInfo appriate value
+            globalInfo.submissionResponses = response; 
+            //reverse submissionResponse so the latest push is always at the end of the array
+            globalInfo.submissionResponses.reverse();  
+            //reset the arrayIndex, so it starts pulling from the start of the new responses
+            globalInfo.submissionResponseArrayIndex = false;
+
+            console.log('array index has been reset')
+        }
         //if there are form submissions, store the submissions in global info as appropriate values
-        if(response.length >= 1){
+        else if(response.length >= 1){
             // assign reponse to globalInfo appriate value
             globalInfo.submissionResponses = response; 
             //reverse submissionResponse so the latest push is always at the end of the array
             globalInfo.submissionResponses.reverse();  
         }
-        //if no form submisions yet, update status log with relevant info
+        //if no form submisions yet, update status log with relevant info & enable "stop searching btn"
         else{
             APILogBuffer('no responses recieved yet');
             console.log(globalInfo);
+            globalInfo.buttonStop.classList.remove('disabled-btn');
         }
 
     });
