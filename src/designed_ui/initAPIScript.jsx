@@ -4,7 +4,7 @@ JF.initialize( {apiKey: "f78958f78beefa5e3e88255e7559579b"} );
 </script> */}
 
 
-
+{/*
 function setUpJFAPI(){
     var body = document.querySelector('body');
     var apiScriptSrc = "https://js.jotform.com/JotForm.js"; //used to retrieve API URL prior to removing from DOM
@@ -22,9 +22,12 @@ function setUpJFAPI(){
     
     //initialise the script
     function initScript(){
-        JF.initialize( {apiKey: "f78958f78beefa5e3e88255e7559579b"} ); 
+        JF.initialize( {apiKey: "4889f4992570fdf8bec164429d63b190"} ); 
      }
 }
+*/}
+
+
 
 
 

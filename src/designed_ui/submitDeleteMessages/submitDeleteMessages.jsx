@@ -24,7 +24,8 @@ function SubmitDeleteMessages() {
 
                 <div class="submit-delete-messages btn send">
                     <div class='send icon' ></div>
-                    <a href="javascript:void( window.open( 'https://form.jotform.com/221101537081038', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) ">
+                    {/* old code: 221101537081038 */}
+                    <a href="javascript:void( window.open( 'https://www.jotform.com/form/230950934276057', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) ">
                         <span >Send notification</span>
                     </a>
                 </div>

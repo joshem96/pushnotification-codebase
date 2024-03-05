@@ -24,6 +24,6 @@ function ControlPanelUI() {
         </div>
     </>
     );
-  }
+}
 
   export {ControlPanelUI}

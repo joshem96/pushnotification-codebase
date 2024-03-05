@@ -3,7 +3,7 @@ import React, {Suspense, useEffect} from 'react';
 import{Helmet} from "react-helmet";
 import { initglobalInfo } from './designed_ui/global_Info';
 import './App.css';
-import {OriginalU} from './original_ui/OriginalUi.jsx';
+//import {OriginalU} from './original_ui/OriginalUi.jsx';
 import {ControlPanelUI} from './designed_ui/uiContainer/ControlPanelUI.jsx';
 import {Header} from './designed_ui/Header/Header.jsx';
 
@@ -18,7 +18,7 @@ function App() {
 
       //initialise the script
       function initScript(APIScript){
-        APIScript.initialize( {apiKey: "f78958f78beefa5e3e88255e7559579b"} ); 
+        APIScript.initialize( {apiKey: "4889f4992570fdf8bec164429d63b190"} ); //old f78958f78beefa5e3e88255e7559579b
       }
 
       setTimeout( () => {

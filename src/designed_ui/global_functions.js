@@ -76,7 +76,8 @@ function triggerFormPushDataSearch(){
         if(globalInfo.submissionResponseArrayIndex === false && globalInfo.submissionResponses != ''){
             //assign push response to variable
             var pushResponse = globalInfo.submissionResponses[0].answers[globalInfo.responseAnswerNumber];
-
+            console.log('global info', globalInfo)
+            console.log('push response ',pushResponse);
             //insert newly recieved push response into push and display push (visa insertPush())
             insertPush(pushResponse.answer);
 
